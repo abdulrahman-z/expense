@@ -50,7 +50,13 @@ export default function PermanentDrawerLeft() {
         <Divider />
         <List>
           {["Dashboard", "My Expenses"].map((text, index) => (
-            <ListItem button key={text} onClick={() => setSelectedMenu(text)}>
+            <ListItem
+              button
+              key={text}
+              onClick={() => {
+                setSelectedMenu(text);
+              }}
+            >
               <ListItemIcon style={{ color: "#fff" }}>
                 {index % 2 === 0 ? (
                   <DashboardIcon />
